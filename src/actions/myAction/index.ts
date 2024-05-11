@@ -5,7 +5,9 @@ const myAction: WorkspaceAction = {
   key: 'myAction',
   name: 'My Action',
   description: 'My Action',
-  handlerScript: processJSImports(path.join(__dirname, 'handler.js')),
+  handlerScript: processJSImports(path.join(__dirname, 'handler.js'), {
+    variableKey: 123
+  }),
   inputSchema: {
     type: 'object',
     properties: {
